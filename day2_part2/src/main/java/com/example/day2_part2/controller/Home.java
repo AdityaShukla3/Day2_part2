@@ -1,5 +1,14 @@
 package com.example.day2_part2.controller;
 
-public class Home {
+import com.example.day2_part2.model.StudentModel;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
+@RestController
+public class Home {
+    @GetMapping("/")
+    public StudentModel getStudent(){
+        StudentModel student =new StudentModel(1,"Aditya","adi@gmail.com");
+        return student;
+    }
 }
